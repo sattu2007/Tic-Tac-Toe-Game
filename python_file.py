@@ -8,12 +8,12 @@ options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 options.add_argument('--no-sandbox')
 driver = webdriver.Chrome(service=service, options=options)
-driver.get("https://scifigurmeet.github.io/demowebsite/")  # Update this with the path to your HTML file
+driver.get("https://sattu2007.github.io/Tic-Tac-Toe-Game/")  # Update this with the path to your HTML file
 
 time.sleep(2)  # Adding a delay to see the result
 
 # Assert some condition to verify the result
-assert "My Awesome Website" in driver.title
+assert "Winner" in driver.title
 
 # Take a screenshot
 timestamp = time.strftime("%Y%m%d-%H%M%S")
