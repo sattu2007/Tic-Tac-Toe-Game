@@ -13,7 +13,7 @@ driver.get("https://sattu2007.github.io/Tic-Tac-Toe-Game/")  # Update this with 
 time.sleep(2)  # Adding a delay to see the result
 
 # Assert some condition to verify the result
-assert "Winner" in driver.title
+assert "Tic-Tac-Toe Game" in driver.title
 
 # Take a screenshot
 timestamp = time.strftime("%Y%m%d-%H%M%S")
