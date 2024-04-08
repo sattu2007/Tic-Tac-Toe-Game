@@ -93,11 +93,20 @@ console.log("Script loaded!");
 console.log("This is a console log message.");
 
 // You can add more console logs as needed
-const timestampElement = document.getElementById('timestamp');
-const date = new Date();
-const timestamp = date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-timestampElement.textContent = timestamp.toUpperCase();
-};
+// const timestampElement = document.getElementById('timestamp');
+// const date = new Date();
+// const timestamp = date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+// timestampElement.textContent = timestamp.toUpperCase();
+// };
 
+     function updateTimestamp() {
+    // Get the current date and time
+    var currentDate = new Date();
+    // Format the date and time as desired
+    var formattedDate = currentDate.toLocaleString(); // Example format: "4/5/2024, 12:30:45 PM"
+    // Update the content of the element with id "timestamp"
+    document.getElementById("timestamp").textContent = formattedDate;
+  }
+ window.onload = updateTimestamp;
 newGameBtn.addEventListener("click", resetGame);
 resetBtn.addEventListener("click", resetGame);
